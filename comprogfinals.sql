@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 27, 2018 at 09:54 AM
+-- Generation Time: Mar 27, 2018 at 03:21 PM
 -- Server version: 5.7.11
 -- PHP Version: 5.6.18
 
@@ -272,14 +272,14 @@ CREATE TABLE `featured` (
 --
 
 INSERT INTO `featured` (`id`, `product_image`, `product_name`, `product_detail`, `qty`, `price`) VALUES
-(1, 'https://www.fortunaonline.net/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/p/a/payfrij001-del-monte-100_-pineapple-juice-240ml_1.png', 'Del Monte Pineapple Juice', 'Pineapple Juice', 94, 40.00),
-(2, 'https://cdn7.bigcommerce.com/s-um6op5fe4t/images/stencil/1280x1280/products/451/1553/COBRA_ENERGY_DRINK_350ML__12561.1499044374.jpg?c=2&imbypass=on&imbypass=on', 'Cobra Energy Drink', 'Cobra Energy Drink', 102, 24.75),
-(3, 'http://static2.coffscordials.com.au/image/cache/data/products/xGABB-max-350-600.jpg.pagespeed.ic.oePU2lGDlo.webp', 'Gatorade Fierce Blue Bold', 'Energy Drink', 126, 45.00),
-(4, 'https://cdn0.woolworths.media/content/wowproductimages/large/038121.jpg', 'Coca Cola', 'Cola Drink', 89, 60.00),
-(5, 'https://i.imgur.com/gVaAf5o.jpg', 'Hotdog Sandwich', 'Hotdog Sandwich', 46, 35.00),
-(6, 'https://images-na.ssl-images-amazon.com/images/I/71O7ZergaWL._SL1500_.jpg', 'Toblerone', 'Chocalate', 115, 70.00),
-(7, 'http://www.bigbag.com.ph/wp-content/uploads/2015/12/Nestle-Yogurt-Fruit-Selection-Yummy-Strawberry-Flavor-125g.png', 'Nestle Strawberry Yogurt', 'Low fat Yogurt', 72, 29.75),
-(8, 'http://shannonpresson.com/dash/wp-content/uploads/2015/10/donuts.png', 'Donuts', 'D\'oh-nuts', 99, 20.00);
+(1, 'https://www.fortunaonline.net/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/p/a/payfrij001-del-monte-100_-pineapple-juice-240ml_1.png', 'Del Monte Pineapple Juice', 'Build your immunity everyday with Del Monte 100% Pineapple Juice. Every sip is loaded with nature\'s phytochemicals plus Vitamins A, C and E. Start drinking to better health with Del Monte 100% Pineapple Juice with ACE today!', 94, 40.00),
+(2, 'https://cdn7.bigcommerce.com/s-um6op5fe4t/images/stencil/1280x1280/products/451/1553/COBRA_ENERGY_DRINK_350ML__12561.1499044374.jpg?c=2&imbypass=on&imbypass=on', 'Cobra Energy Drink', 'Cobra Energy Drink is the Philippines’ No. 1 Energy Drink. It contains carbohydrates and B vitamins for the extra energy needed for enhanced mental and physical performance.', 102, 24.75),
+(3, 'http://static2.coffscordials.com.au/image/cache/data/products/xGABB-max-350-600.jpg.pagespeed.ic.oePU2lGDlo.webp', 'Gatorade Fierce Blue Bold', 'The source for everything Gatorade including the G Series, sports science innovation, nutritional information to help you win from within.', 126, 45.00),
+(4, 'https://cdn0.woolworths.media/content/wowproductimages/large/038121.jpg', 'Coca Cola', 'Coca-cola is the most popular and biggest-selling soft drink in history, as well as the best-known brand in the world.', 89, 60.00),
+(5, 'https://i.imgur.com/gVaAf5o.jpg', 'Hotdog Sandwich', 'Freshly made hotdog covered in fluffy, tasty and healthy bread bun. Enjoy and crave in delicious taste of our hotdog sandwich!', 46, 35.00),
+(6, 'https://cdn.bmstores.co.uk/images/hpcProductImage/imgFull/253531-Toblerone-150g-Milk-Chocolate.jpg', 'Toblerone', 'Toblerone is made from some of the finest raw materials from around the world. Reawaken your taste buds and immerse yourself in Toblerone\'s unique taste experience.', 115, 70.00),
+(7, 'http://www.bigbag.com.ph/wp-content/uploads/2015/12/Nestle-Yogurt-Fruit-Selection-Yummy-Strawberry-Flavor-125g.png', 'Nestle Strawberry Yogurt', 'Delicious but not healthy? Healthy but not delicious? Who says you can\'t have both? Nestlé Fruit Selection Yogurt comes in a delicious Strawberry Flavour! Try it!', 72, 29.75),
+(8, 'http://shannonpresson.com/dash/wp-content/uploads/2015/10/donuts.png', 'Donuts', 'Fried dough confectionery dessert food. Filled with any flavors of your choice!', 99, 20.00);
 
 -- --------------------------------------------------------
 
@@ -506,7 +506,10 @@ INSERT INTO `users` (`username`, `email`, `address1`, `address2`, `password`) VA
 ('', '', '', '', ''),
 ('hotshot', 'masterjosamson23@gmail.com', '252', 'Bamban Tarlac', 'joshuaisaacsamsno'),
 ('ja', 'ja', 'ja', 'ja', 'ja'),
-('root', 'root', 'root', 'root', 'root');
+('maiteam', 'maiteamjejemons@gmail.com', '256', 'Brgy. Anupul II, Bamban, Tarlac', 'maiteam'),
+('nolan', 'jnp_samson@yahoo.com', '256', 'Anupul, Bamban, Tarlac', 'kingjames23'),
+('root', 'root', 'root', 'root', 'root'),
+('rowena03', 'weng.samson@yahoo.com', '256', 'Brgy. Anupul II, Bamban, Tarlac', 'bullsy');
 
 --
 -- Indexes for dumped tables

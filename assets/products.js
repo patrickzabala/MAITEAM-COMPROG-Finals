@@ -78,7 +78,7 @@ app.controller("appController", function($scope) {
 
 	$scope.foods2 = [{
 		img: "img/frozen.jpg",
-		title: "Ice Cream",
+		title: "Frozen Food",
 	},];
 
 	$scope.foods3 = [{

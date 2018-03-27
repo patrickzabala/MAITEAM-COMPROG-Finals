@@ -171,7 +171,7 @@
     color: #cdc8b7;
 }
 
-.carousel .carousel-inner button {
+.carousel .carousel-inner .first input {
 	font-family: Verdana;
     letter-spacing: 5px;
     font-size: 20px;
@@ -182,20 +182,54 @@
     border-color: white;
 }
 
-.carousel .carousel-inner button:hover {
+.carousel .carousel-inner input:hover {
 	background-color: white;
 	color: black;
 	transition: 0.5s ease;
 }
 
+.carousel .carousel-inner .second input {
+    font-family: Verdana;
+    letter-spacing: 5px;
+    font-size: 20px;
+    color: red;
+    background-color: white;
+    text-transform: capitalize;
+    padding: 10px;
+    border-color: red;
+}
+
+.carousel .carousel-inner .second input:hover {
+    background-color: red;
+    color: white;
+    transition: 0.2s ease-in-out;
+}
+
+.carousel .carousel-inner .third input {
+    font-family: Verdana;
+    letter-spacing: 5px;
+    font-size: 20px;
+    color: #f5d8a3;
+    background-color: maroon;
+    text-transform: capitalize;
+    padding: 10px;
+    border: 2px solid #f5d8a3;
+}
+
+.carousel .carousel-inner .third input:hover {
+    background-color: #245aa0;
+    color: maroon;
+    transition: 0.2s ease-in-out;
+    opacity: 0.75;
+}
+
+
 .carousel .carousel-inner .caption-2 {
-	color: #cdc8b7;
+    color: red;
     font-family: Rockwell;
     letter-spacing: 5px;
     font-size: 30px;
     text-transform: uppercase;
-    margin-left: -300px;
-    margin-bottom: 55px;
 }
 
 .carousel .carousel-inner .button-2 {
@@ -346,6 +380,8 @@ FEATURED ITEMS*/
     color: black;
     cursor: pointer;
     border: 1px solid green;
+    margin-right: 15px;
+    margin-left: 15px;
 }
 
 .categories-1 .beverages .sub-beverages:last-child {

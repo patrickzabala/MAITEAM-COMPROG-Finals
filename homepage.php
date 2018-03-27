@@ -49,23 +49,20 @@
   						</div>
   					</li>
 
-  					<li class="nav-item"><a href="#">HOME</a></li>
-  					<li class="nav-item"><a href="blog.html">BLOG</a></li>
-  					<li class="nav-item"><a href="about-us.html">ABOUT</a></li>
+  					<li class="nav-item" title="Home"><a href="#">HOME</a></li>
+  					<li class="nav-item" title="Blog"><a href="blog.php">BLOG</a></li>
+  					<li class="nav-item" title="About us"><a href="about-us.php">ABOUT</a></li>
             <?php
               if(!isset($_SESSION['username'])){
-                echo '<li class="nav-item"><a href="sign-in.php">SIGN IN</a></li>';
+                echo '<li class="nav-item" title="Sign In"><a href="sign-in.php">SIGN IN</a></li>';
+                echo '<li class="nav-item" title="Register"><a href="sign-up.php">REGISTER</a></li>';
+              }
+              if(isset($_SESSION['username'])){
+                echo '<li class="nav-item" title="Sign Out"><a href="sign-out.php">SIGN OUT</a></li>';
               }
             ?>
-  					<!-- <li class="nav-item"><a href="sign-in.php">SIGN IN</a></li> -->
-  					<li class="nav-item"><a href="sign-up.php">REGISTER</a></li>
-            <?php
-            if(isset($_SESSION['username'])){
-            echo '<li class="nav-item"><a href="sign-out.php">SIGN OUT</a></li>';
-            }
-            ?>
   					<li class="nav-item icons">
-  						<a href="cartDraft.php"><i class="fa fa-shopping-cart"></i></a>
+  						<a href="cartDraft.php" title="Cart"><i class="fa fa-shopping-cart"></i></a>
   					</li>
   				</div>
   			</div>
@@ -82,25 +79,29 @@
   			<!-- Wrapper for slides -->
   			<div class="carousel-inner">
   				<div class="item active">
-  					<img src="img/san-miguel-3.jpg" alt="" style="width:100%; height: 600px;">
+  					<img src="img/san-miguel-3.jpg" title="Tara na sa walang kapantay na San Maguel Pale Pilsen!" alt="" style="width:100%; height: 600px;">
   					<div class="carousel-caption">
   						<h2>ANG WALANG KAPANTAY NA BEER</h2>
-  						<button>check now</button>
+              <?php $_SESSION['category'] = 'beer'; ?>
+  						<a class="first" href="sub-categories.php?category=beer"><input class="add" type="submit" value="Check Now"/></a>
   				    </div>
   				</div>
 
   				<div class="item">
-  					<img src="img/san-miguel.jpg" alt="" style="width:100%; height: 600px;">
+  					<img src="img/cola-slogan.jpg" title="Taste the Feeling with Coca-Cola Everyday!" alt="" style="width:100%; height: 600px;">
   					<div class="carousel-caption">
-  				        <h2 class="caption-2">ang walang kasing sarap na beer</h2>
-  				        <button class="button-2">shop now</button>
+  				        <h2 class="caption-2">Taste the Feeling</h2>
+  				       <?php $_SESSION['category'] = 'carbonatedDrinks'; ?>
+              <a class="second" href="sub-categories.php?category=carbonatedDrinks"><input class="add" type="submit" value="Check Now"/></a>
   				    </div>
   				</div>
   						    
   				<div class="item">
-  					<img src="img/san-miguel-2.jpg" alt="" style="width:100%; height: 600px;">
+  					<img src="img/toblerone-slogan.jpg" title="Ang paliparan na tsokolate!" alt="" style="width:100%; height: 600px;">
   					<div class="carousel-caption">
-  				        <h2 class="caption-3">join now!</h2>
+  				        <h2 class="caption-3">Taste the Sweetness while it lasts</h2>
+                  <?php $_SESSION['category'] = 'sweetSnacks'; ?>
+              <a class="third" href="sub-categories.php?category=sweetSnacks"><input class="add" type="submit" value="Check Now"/></a>
   				    </div>
   				</div>
     			</div>
@@ -129,7 +130,7 @@
     		</div>
     	</div>
     	<div class="image">
-    		<img src="img/gator-slogan.jpg" style="width: 100%; height: 60%;">
+    		<a href="https://www.gatorade.com/"><img src="img/gator-slogan.jpg" title="Gatorade! The number 1 sports energy drink! Taste GOOD and Feel GOOD!" style="width: 100%; height: 60%;"></a>
     	</div>
     	<div class="featured">
     		<div class="container">
@@ -154,12 +155,12 @@
               if ($result) {
                 while($row = mysql_fetch_array($result)) {
                   echo '<div class="img col-md-3">';
-                    echo '<img src="'.$row['product_image'].'">';
+                    echo '<img src="'.$row['product_image'].'" title="'.$row['product_name'].'">';
                       echo '<div class="txt">';
                         echo '<h3>'.$row['product_name'].'</h3>'; 
                         echo '<p>'.$currency.$row['price'].'</p>';
                           if($row['qty'] > 0) {
-                          echo '<p><a href="update-cart.php?category=featured&action=add&id='.$row['id'].'"><input class="add" type="submit" value="Add To Cart"/></a></p>';
+                          echo '<p><a href="update-cart.php?category=featured&action=add&id='.$row['id'].'"><input class="add" title="Add to Cart" type="submit" value="Add To Cart"/></a></p>';
                   } else {
                     echo 'Out of stock';
                   }
@@ -175,7 +176,7 @@
     		</div>
     	</div>
     	<div class="image">
-    		<img src="img/adds1.jpg" style="width: 100%; height: 60%;">
+    		<a href="https://cashkaro.com/stores/natures-basket"><img src="img/adds1.jpg" title="Go to our partner, CashKaro, for exclusive coupons and offers!" style="width: 100%; height: 60%;"></a>
     	</div>
     	<div class="categories-1" id="beve">
     		<div class="container">
@@ -186,31 +187,31 @@
                 <h4 id="fns">BEVERAGES</h4>
                 <div class="sub-beverages col-md-2" ng-repeat="x in beverages1">
                   <a href="sub-categories.php?category=beer">
-                  <img src="{{x.img}}">
+                  <img src="{{x.img}}" title="Beer">
                   <p>{{x.title}}</p>
                   </a>
                 </div>
                 <div class="sub-beverages col-md-2" ng-repeat="x in beverages2">
                   <a href="sub-categories.php?category=bottledWater">
-                  <img src="{{x.img}}">
+                  <img src="{{x.img}}" title="Bottled Water">
                   <p>{{x.title}}</p>
                   </a>
                 </div>
                 <div class="sub-beverages col-md-2" ng-repeat="x in beverages3">
                   <a href="sub-categories.php?category=carbonatedDrinks">
-                  <img src="{{x.img}}">
+                  <img src="{{x.img}}" title="Carbonated Drinks">
                   <p>{{x.title}}</p>
                   </a>
                 </div>
                 <div class="sub-beverages col-md-2" ng-repeat="x in beverages4">
                   <a href="sub-categories.php?category=energyDrinks">
-                  <img src="{{x.img}}">
+                  <img src="{{x.img}}" title="Energy Drinks">
                   <p>{{x.title}}</p>
                   </a>
                 </div>
                 <div class="sub-beverages col-md-2" ng-repeat="x in beverages5">
                   <a href="sub-categories.php?category=drinks">
-                  <img src="{{x.img}}">
+                  <img src="{{x.img}}" title="Drinks">
                   <p>{{x.title}}</p>
                   </a>
                 </div>
@@ -223,31 +224,31 @@
                 <h4 id="hnh">FOODS AND SNACKS</h4>
                   <div class="sub-beverages col-md-2" ng-repeat="x in foods1">
                     <a href="sub-categories.php?category=readyToEat">
-                    <img src="{{x.img}}">
+                    <img src="{{x.img}}" title="Ready-To-Eat">
                     <p>{{x.title}}</p>
                     </a>
                   </div>
                   <div class="sub-beverages col-md-2" ng-repeat="x in foods2">
                     <a href="sub-categories.php?category=frozenFood">
-                    <img src="{{x.img}}">
+                    <img src="{{x.img}}" title="Frozen Food">
                     <p>{{x.title}}</p>
                     </a>
                   </div>
                   <div class="sub-beverages col-md-2" ng-repeat="x in foods3">
                     <a href="sub-categories.php?category=candies">
-                    <img src="{{x.img}}">
+                    <img src="{{x.img}}" title="Candies">
                     <p>{{x.title}}</p>
                     </a>
                   </div>
                   <div class="sub-beverages col-md-2" ng-repeat="x in foods4">
                     <a href="sub-categories.php?category=saltySnacks">
-                    <img src="{{x.img}}">
+                    <img src="{{x.img}}" title="Salty Snacks">
                     <p>{{x.title}}</p>
                     </a>
                   </div>
                   <div class="sub-beverages col-md-2" ng-repeat="x in foods5">
                     <a href="sub-categories.php?category=sweetSnacks">
-                    <img src="{{x.img}}">
+                    <img src="{{x.img}}" title="Sweet Snacks">
                     <p>{{x.title}}</p>
                     </a>
                   </div>
@@ -259,31 +260,31 @@
                 <h4>HEALTH AND HYGIENE</h4>
                 <div class="sub-beverages col-md-2" ng-repeat="x in health1">
                   <a href="sub-categories.php?category=soapShampoo">
-                  <img src="{{x.img}}">
+                  <img src="{{x.img}}" title="Soap and Shampoo">
                   <p>{{x.title}}</p>
                   </a>
                 </div>
                 <div class="sub-beverages col-md-2" ng-repeat="x in health2">
                   <a href="sub-categories.php?category=toothProduct">
-                  <img src="{{x.img}}">
+                  <img src="{{x.img}}" title="Tooth Products">
                   <p>{{x.title}}</p>
                   </a>
                 </div>
                 <div class="sub-beverages col-md-2" ng-repeat="x in health3">
                   <a href="sub-categories.php?category=alcohol">
-                  <img src="{{x.img}}">
+                  <img src="{{x.img}}" title="Alcohol">
                   <p>{{x.title}}</p>
                   </a>
                 </div>
                 <div class="sub-beverages col-md-2" ng-repeat="x in health4">
                   <a href="sub-categories.php?category=lotion">
-                  <img src="{{x.img}}">
+                  <img src="{{x.img}}" title="Lotion">
                   <p>{{x.title}}</p>
                   </a>
                 </div>
                 <div class="sub-beverages col-md-2" ng-repeat="x in health5">
                   <a href="sub-categories.php?category=deodorant">
-                  <img src="{{x.img}}">
+                  <img src="{{x.img}}" title="Deodorant">
                   <p>{{x.title}}</p>
                   
                   </a>

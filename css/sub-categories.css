@@ -165,7 +165,7 @@
 
 .products {padding-top: 175px;}
 .products .img img {
-    max-width: 100%;
+    width: 250px;
     height: 270px;
 }
 

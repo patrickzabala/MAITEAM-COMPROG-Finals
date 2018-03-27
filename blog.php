@@ -35,14 +35,24 @@
   						</div>
   					</li>
 
-  					<li class="nav-item "><a href="homepage.php">HOME</a></li>
-            <li class="nav-item"><a href="blog.html">BLOG</a></li>
-            <li class="nav-item"><a href="about-us.html">ABOUT</a></li>
-            <li class="nav-item"><a href="sign-in.php">LOGIN</a></li>
-            <li class="nav-item"><a href="sign-up.php">SIGN UP</a></li>
-  					<li class="nav-item icons">
-  						<i class="fa fa-shopping-cart"></i>
-  					</li>
+  					<li class="nav-item" title="Home"><a href="homepage.php">HOME</a></li>
+            <li class="nav-item" title="Blog"><a href="#">BLOG</a></li>
+            <li class="nav-item" title="About Us"><a href="about-us.php">ABOUT</a></li>
+            <?php
+              if(!isset($_SESSION['username'])){
+                echo '<li class="nav-item" title="Sign In"><a href="sign-in.php">SIGN IN</a></li>';
+                echo '<li class="nav-item" title="Register"><a href="sign-up.php">REGISTER</a></li>';
+              }
+            ?>
+            <!-- <li class="nav-item"><a href="sign-in.php">SIGN IN</a></li> -->
+            <?php
+            if(isset($_SESSION['username'])){
+            echo '<li class="nav-item" title="Sign Out"><a href="sign-out.php">SIGN OUT</a></li>';
+            }
+            ?>
+            <li class="nav-item icons">
+              <a href="cartDraft.php" title="Cart"><i class="fa fa-shopping-cart"></i></a>
+            </li>
   				</div>
   			</div>
   		</div>
@@ -92,11 +102,11 @@
           <div class="menu col-md-4">
             <ul class="first">
               <p>MAITEAM</p>
-              <li class="nav-item1 "><a href="#">CABUSO, JEHM M.</a></li>
-              <li class="nav-item1"><a href="#">LABSO, JOHN ANTHONY P.</a></li>
-              <li class="nav-item1"><a href="#">LUSUNG, JEAN MARIELLE M.</a></li>
-              <li class="nav-item1"><a href="#">SAMSON, JASPER IRA S.</a></li>
-              <li class="nav-item1"><a href="#">ZABALA, PATRICK G.</a></li>
+              <li class="nav-item1 "><a href="https://www.facebook.com/xCarry">CABUSO, JEHM M.</a></li>
+              <li class="nav-item1"><a href="https://www.facebook.com/anthony.labso">LABSO, JOHN ANTHONY P.</a></li>
+              <li class="nav-item1"><a href="https://www.facebook.com/jeaaanml">LUSUNG, JEAN MARIELLE M.</a></li>
+              <li class="nav-item1"><a href="https://www.facebook.com/saoyakitatekyojin">SAMSON, JASPER IRA S.</a></li>
+              <li class="nav-item1"><a href="https://www.facebook.com/patrick.zabala13">ZABALA, PATRICK G.</a></li>
             </ul>
           </div>
           <div class="menu col-md-4">

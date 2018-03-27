@@ -48,23 +48,22 @@
   						</div>
   					</li>
 
-  					<li class="nav-item"><a href="homepage.php">HOME</a></li>
-            <li class="nav-item"><a href="blog.html">BLOG</a></li>
-            <li class="nav-item"><a href="about-us.html">ABOUT</a></li>
+  					<li class="nav-item" title="Home"><a href="homepage.php">HOME</a></li>
+            <li class="nav-item" title="Blog"><a href="blog.php">BLOG</a></li>
+            <li class="nav-item" title="About Us"><a href="about-us.php">ABOUT</a></li>
             <?php
               if(!isset($_SESSION['username'])){
-                echo '<li class="nav-item"><a href="sign-in.php">SIGN IN</a></li>';
+                echo '<li class="nav-item" title="Sign In"><a href="sign-in.php">SIGN IN</a></li>';
+                echo '<li class="nav-item" title="Register"><a href="sign-up.php">REGISTER</a></li>';
               }
             ?>
-            <!-- <li class="nav-item"><a href="sign-in.php">SIGN IN</a></li> -->
-            <li class="nav-item"><a href="sign-up.php">REGISTER</a></li>
             <?php
             if(isset($_SESSION['username'])){
-            echo '<li class="nav-item"><a href="sign-out.php">SIGN OUT</a></li>';
+            echo '<li class="nav-item" title="Sign Out"><a href="sign-out.php">SIGN OUT</a></li>';
             }
             ?>
             <li class="nav-item icons">
-              <a href="cartDraft.php"><i class="fa fa-shopping-cart"></i></a>
+              <a href="cartDraft.php" title="Cart"><i class="fa fa-shopping-cart"></i></a>
             </li>
   				</div>
   			</div>

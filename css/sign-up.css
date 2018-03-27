@@ -203,10 +203,19 @@
     font-size: small;
 }
 
-.signup button {
-    border: 2px solid;
-    padding: 12px 12px 12px 12px;
+.signup .txt .button input {
+    border: 2px solid white;
+    background-color: green;
+    color: white;
+    font-size: 12px;
+    font-family: Verdana;
+    font-weight: bold;
     border-radius: 10px;
+}
+
+.signup .txt .button input:hover {
+    opacity: 0.75; 
+    transition: 0.2s ease-in-out;
 }
 
 .signup .submit-button {

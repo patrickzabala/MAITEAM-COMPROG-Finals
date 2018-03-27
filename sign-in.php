@@ -2,9 +2,8 @@
 	include "connection.php";
 
 	session_start();
-
   if(isset($_SESSION['username'])){
-    header("location: homepage.php");
+        header("location: homepage.php");
   }
 
 	if(isset($_POST['username'])){
@@ -18,6 +17,7 @@
 
 		if($row ["username"] == $username){
 			$_SESSION['username'] = $row["username"];
+      header("location: homepage.php");
 			// $message = "SIGN IN SUCCESS:Welcome,".$_SESSION['username'];
 		} 
   //   else {
@@ -63,23 +63,22 @@
   						</div>
   					</li>
 
-  					<li class="nav-item"><a href="#">HOME</a></li>
-            <li class="nav-item"><a href="blog.html">BLOG</a></li>
-            <li class="nav-item"><a href="about-us.html">ABOUT</a></li>
+  					<li class="nav-item" title="Home"><a href="homepage.php">HOME</a></li>
+            <li class="nav-item" title="Blog"><a href="blog.php">BLOG</a></li>
+            <li class="nav-item" title="About Us"><a href="about-us.php">ABOUT</a></li>
             <?php
-              if(!isset($_SESSION['username'])){
-                echo '<li class="nav-item"><a href="sign-in.php">SIGN IN</a></li>';
+            if(!isset($_SESSION['username'])){
+                echo '<li class="nav-item" title="Sign In"><a href="#">SIGN IN</a></li>';
+                echo '<li class="nav-item" title="Register"><a href="sign-up.php">REGISTER</a></li>';
               }
             ?>
-            <!-- <li class="nav-item"><a href="sign-in.php">SIGN IN</a></li> -->
-            <li class="nav-item"><a href="sign-up.php">REGISTER</a></li>
             <?php
             if(isset($_SESSION['username'])){
-            echo '<li class="nav-item"><a href="sign-out.php">SIGN OUT</a></li>';
+            echo '<li class="nav-item" title="Sign Out"><a href="sign-out.php">SIGN OUT</a></li>';
             }
             ?>
             <li class="nav-item icons">
-              <a href="cartDraft.php"><i class="fa fa-shopping-cart"></i></a>
+              <a href="cartDraft.php" title="Cart"><i class="fa fa-shopping-cart"></i></a>
             </li>
   				</div>
   			</div>
@@ -102,7 +101,7 @@
 					        </label>
             				<br>
 		            		<div class="button-login">
-			 		           	<button type="button" class="signup-button"><a href="sign-up.html">SIGN UP</a></button>
+			 		           	<button type="button" class="signup-button"><a href="sign-up.php">SIGN UP</a></button>
 			            		<input type="submit" name="login-button" placeholder="LOGIN"></a></input>
             				</div>
             			</form>
@@ -149,10 +148,5 @@
         </div>
       </div>
     </div>
-    <?php
-    if(isset($_SESSION['username'])){
-      header("location: homepage.php");
-    }
-    ?>
 </body>
 </html>

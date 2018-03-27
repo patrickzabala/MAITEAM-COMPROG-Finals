@@ -1,0 +1,1 @@
+var varApp = angular.module("shopApp", []);

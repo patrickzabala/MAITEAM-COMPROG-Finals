@@ -1,0 +1,306 @@
+/*NAVBAR*/
+.welcome {
+    background-color: palegreen;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+}
+.welcome-text img {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    width: 50%;
+    height: 69px;
+}
+
+.welcome-text p:hover {
+    color: #f4a482;
+    transition: 0.5s ease-in-out;
+}
+
+.welcome input[type=text] {
+    height: 24px;
+    box-sizing: border-box; 
+    border: 2px solid #ccc;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    font-size: 12px;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 20px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    width: 20%;
+    color: #656565;
+}
+
+.welcome input[type=text]:focus {
+    width: 50%;
+}
+
+.search-bar {
+    text-align: right;
+    padding-top: 15px;
+    top: 6px;
+}
+
+.search-bar i {
+    position: relative;
+    opacity: 0.6;
+}
+
+.search-bar button {
+    border: 2px solid #ccc;
+    position: relative;
+    left: -6px;
+    padding-bottom: 3px;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    height: 28px;
+}
+
+.navbar {
+    background-color: orange;
+    z-index: 500;
+    width: 100%;
+    top: 45px;
+    position: fixed;
+    padding-top: 10px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    color: #656565;
+    letter-spacing: 1px;
+    font-size: 12px;
+}
+
+.dropdown-txt:hover {
+    color: white;
+    transition: 0.5s ease;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    padding: 20px;
+    background-color: #fff;
+    z-index: 5000;
+}
+
+.categories a:hover {
+    color: #ff6c00;
+    text-decoration: none;
+}
+
+.nav-item {
+    display: inline-block;
+    padding: 10px;
+    font-family: Verdana;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 12px;
+    padding-top: 30px;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #656565;
+}
+
+.nav-item a:hover {
+    text-decoration: none;
+    color: white;
+    transition: 0.5s ease;
+}
+
+.categories a {
+    position: relative;
+    display: block;
+    color: #656565;
+}
+
+.sub-categories {
+    display: none;
+    position: absolute;
+    z-index: 5000;
+    background-color: white;
+    margin-left: 280px;
+    margin-top: -48px;
+    padding: 20px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.categories-2 {
+    display: block;
+    position: relative;
+}
+
+.navbar i {
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.navbar i:hover {
+    color: white;
+    transition: 0.5s ease;
+}
+
+
+
+
+table {
+    text-align: center;
+    padding: 20px 20px 20px 20px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.holder button {
+	width: 80px;
+    height: 35px;
+    border-radius: 5px;
+    border: 2px solid white;
+    font-family: Verdana;
+    background-color: orangered;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.holder .holder2 h1 {
+    text-align: center;
+    font-family: Verdana;
+    font-weight: bold;
+    color: green;
+}
+
+.holder .titles {
+	font-family: Verdana;
+    font-size: 15px;
+    color: darkgreen;
+}
+
+.holder img {
+    width: 200px;
+    height: 250px;
+}
+
+.holder {
+    padding-top: 150px;
+    padding-bottom: 50px;
+}
+
+.holder hr {
+    border-top: 2px solid orange;
+}
+
+.holder th {
+    text-align: center;
+    font-family: Verdana;
+    font-size: 12px;
+    padding-right: 15px;
+}
+
+.holder .holder2 .info {
+    padding-left: 80px;
+    letter-spacing: 2px;
+    text-align: left;
+}
+
+.holder .holder2 td {
+    font-family: Verdana;
+    font-size: 12px;
+}
+
+.holder .holder2 td .name {
+    font-size: 12px;
+    line-height: 70px;
+}
+
+/*.details {
+	font-family: Verdana;
+    font-size: 12px;
+}*/
+
+.totalCost{
+    text-align: left;
+}
+
+
+
+
+
+/*FOOTER*/
+.footer {background-color: palegreen;}
+.footer .menu {
+    padding-top: 60px;
+    padding-bottom: 50px;
+
+}
+
+.footer .menu .nav-item1 {
+    list-style: none;
+    padding-bottom: 5px;
+    font-family: Verdana;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 0.9em;
+    line-height: 20px;
+}
+
+.footer .menu .nav-item1 a {color: #656565;}
+.footer .menu p {
+    border-bottom: 1px solid #65656594;
+    padding-bottom: 10px;
+    color: #656565;
+    font-family: Verdana;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 1.1em;
+}
+
+.footer .menu .nav-item1 i {
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.footer .menu .nav-item1 i:hover {
+    text-decoration: underline;
+}
+
+.footer .menu h4 {font-size: 12px;}
+.footer .menu h5 {font-size: 11px;}
+.footer .menu .nav-item2 {
+    display: inline;
+    padding-left: 10px;
+}
+
+.footer .menu .nav-item2 img {
+    width: 10%;
+    height: 5%;
+}
+
+.footer .menu .mother {
+    padding-bottom: 10px;
+    padding-left: 0;
+}
+
+.footer .menu .nav-item2 img:hover {
+    opacity: 0.5;
+    transition: 0.5s ease;
+};
+
+.footer .menu .second {padding: 0;}
+.footer .menu .first {padding-left: 0;}
